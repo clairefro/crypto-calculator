@@ -8,9 +8,13 @@ class Search extends Component {
 
   renderSearchResults = () => {
     const { searchResults } = this.props;
-    return searchResults.map((result)=> {
+    return searchResults.map((curr)=> {
       return (
-        <li key={result.id}>{result.name}</li>
+        <li key={curr.id} className="currency-list-item">
+          <a href="#" className="currency">
+            <span>{curr.name}</span> <span>{curr.currency_symbol}</span>
+          </a>
+        </li>
       );
     })
 
@@ -23,7 +27,7 @@ class Search extends Component {
       <div>
         <h1>Cryptocurrency Portfolio Calculator</h1>
         <form className="form-group" action="">
-          <label htmlFor="">Search for a currency:</label><br/>
+          <label>Search for a currency:</label><br/>
           <input
             autoComplete="off"
             type="text"
