@@ -48,17 +48,20 @@ class PortfolioContainer extends Component {
       active_currency: activeCurrency,
       search_results: []
     });
-    
+
   }
 
   render() {
+    const searchOrCalculate = this.state.active_currency ?
+    <Calculate /> :
+    <Search
+      searchResults={this.state.search_results}
+      handleChange={this.handleChange}
+      handleSelect={this.handleSelect} />
+
     return (
       <div>
-        <Search
-          searchResults={this.state.search_results}
-          handleChange={this.handleChange}
-          handleSelect={this.handleSelect} />
-        <Calculate />
+        {searchOrCalculate}
       </div>
     );
   }

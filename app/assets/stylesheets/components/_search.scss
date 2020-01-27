@@ -1,0 +1,23 @@
+.currency-list-item {
+  box-shadow: 2px 2px 6px 3px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.3s;
+  &:hover {
+    transition: 0.3s;
+    transform: scaleX(1.005) scaleY(1.005);
+    cursor: pointer;
+  }
+  a {
+    color: #6b524c;
+    text-decoration: none;
+  }
+}
+
+li {
+  list-style: none;
+}
