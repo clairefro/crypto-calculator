@@ -9,18 +9,18 @@ class CurrenciesController < ApplicationController
 
   # takes in currency id and amount owned, returns calculations
   def calculate
-    amount = params[:amount]
+    amount = params[:amount].to_i
     render json: {
       currency: currency,
-      current_price: current_price,
+      current_price: currency.current_price,
       amount: amount,
-      value: currency.calculate_value
+      value: currency.calculate_value(amount)
     }
   end
 
   private
 
   def currency
-    @currency ||= Currency.find(params[:id])
+    @currency ||= Currency.find(params[:id].to_i)
   end
 end
