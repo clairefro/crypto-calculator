@@ -56,7 +56,7 @@ class PortfolioContainer extends Component {
     let currency = this.state.active_currency;
     let amount = this.state.amount;
 
-    axios.get('/calculate', {params: {
+    axios.get('/calculate', { params: {
       id: currency.id,
       amount: amount
     }})
@@ -67,10 +67,10 @@ class PortfolioContainer extends Component {
         active_currency: null,
         portfolio: [...this.state.portfolio, data.data]
       })
+      console.log(data)
     })
     .catch(data => {debugger}
     );
-    console.log(this.state)
   }
 
   // for Calculate
@@ -96,6 +96,7 @@ class PortfolioContainer extends Component {
     return (
       <div>
         {searchOrCalculate}
+        <Portfolio portfolio={this.state.portfolio} />
       </div>
     );
   }

@@ -12,7 +12,9 @@ import PortfolioContainer from './portfolio_container'
 class App extends Component {
   render() {
     return (
-      <PortfolioContainer />
+      <div className="container">
+        <PortfolioContainer />
+      </div>
     );
   }
 }
