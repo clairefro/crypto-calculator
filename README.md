@@ -1,3 +1,10 @@
+based on tutorial by zaineio
+
+
+https://github.com/zayneio/cryptocurrency-calculator
+
+
+https://www.youtube.com/watch?v=dpYPLUO3QcI
 # README
 
 This README would normally document whatever steps are necessary to get the
