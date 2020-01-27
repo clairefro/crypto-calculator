@@ -94,9 +94,13 @@ class PortfolioContainer extends Component {
       handleSelect={this.handleSelect} />
 
     return (
-      <div>
-        {searchOrCalculate}
-        <Portfolio portfolio={this.state.portfolio} />
+      <div className="grid">
+        <div className="left">
+          {searchOrCalculate}
+        </div>
+        <div className="right">
+          <Portfolio portfolio={this.state.portfolio} />
+        </div>
       </div>
     );
   }
