@@ -3,26 +3,26 @@ import React, { Component } from 'react';
 class Search extends Component {
   constructor(props){
     super(props);
-
   }
 
   renderSearchResults = () => {
     const { searchResults } = this.props;
     return searchResults.map((curr)=> {
       return (
-        <li key={curr.id} className="currency-list-item">
+        <li
+          key={curr.id}
+          data-id={curr.id}
+          className="currency-list-item"
+          onClick={this.props.handleSelect}>
           <a href="#" className="currency">
             <span>{curr.name}</span> <span>{curr.currency_symbol}</span>
           </a>
         </li>
       );
     })
-
   }
 
   render() {
-
-
     return (
       <div>
         <h1>Cryptocurrency Portfolio Calculator</h1>
